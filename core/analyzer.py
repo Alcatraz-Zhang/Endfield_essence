@@ -65,7 +65,7 @@ class VisionAnalyzer:
             res = cv2.matchTemplate(search_area, template, cv2.TM_CCOEFF_NORMED)
             _, max_val, _, _ = cv2.minMaxLoc(res)
 
-            return max_val > 0.80
+            return max_val > 0.75
 
         except Exception as e:
             if hasattr(self, 'log_cb'):
